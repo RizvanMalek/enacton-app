@@ -54,10 +54,10 @@ const ListPage: React.FC = () => {
         fetchLaunches(page === 0);
     }, [page]);
 
-    useEffect(() => {
-        setPage(0);
-        fetchLaunches(true);
-    }, [debouncedSearch, rocketFilter, successFilter]);
+    // useEffect(() => {
+    //     setPage(0);
+    //     fetchLaunches(true);
+    // }, [debouncedSearch, rocketFilter, successFilter]);
 
     const filteredLaunches = launches.filter((l) => {
         const missionMatch = l.mission_name.toLowerCase().includes(debouncedSearch.toLowerCase());
